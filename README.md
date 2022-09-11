@@ -81,5 +81,4 @@ Açıkcası çok fazla zamanım olmadığı için programı hızlıca bitirmek i
   
 Video: https://youtu.be/_dQhrBjByrs
 
-<video src='https://youtu.be/_dQhrBjByrs' width=100% height=400px/>
-
+[September 11, 2022.webm](https://user-images.githubusercontent.com/36519570/189521761-dc300658-f587-4c1d-9470-71a05c41f787.webm)
