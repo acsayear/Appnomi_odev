@@ -81,4 +81,5 @@ Açıkcası çok fazla zamanım olmadığı için programı hızlıca bitirmek i
   
 Video: https://youtu.be/_dQhrBjByrs
 
-<iframe width="1280" height="723" src="https://www.youtube.com/embed/_dQhrBjByrs" title="September 11, 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<video src='https://youtu.be/_dQhrBjByrs' width=100% height=400px/>
+
