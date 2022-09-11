@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import androidx.appcompat.content.res.AppCompatResources;
 
-import com.example.appnomiodev.databinding.ActivityProductsBinding;
 import com.example.appnomiodev.databinding.CustomDialogBinding;
 
 public class MyCustomDialog {

@@ -1,7 +1,6 @@
 package com.example.appnomiodev;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Build;
 import android.text.Html;
 import android.view.LayoutInflater;

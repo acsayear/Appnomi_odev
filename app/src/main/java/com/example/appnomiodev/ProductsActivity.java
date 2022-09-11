@@ -1,19 +1,17 @@
 package com.example.appnomiodev;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 import com.example.appnomiodev.databinding.ActivityProductsBinding;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class ProductsActivity extends AppCompatActivity {
