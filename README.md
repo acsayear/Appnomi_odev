@@ -79,11 +79,6 @@ Notlar:
   
 Açıkcası çok fazla zamanım olmadığı için programı hızlıca bitirmek istedim. APK ve ABB dosyaları Release klasörü içerisindedir. Dediğim gibi tasarım çok daha güzel olabilirdi. Genel olarak aynı şeylere farklı yaklaşımlar kullandığımı görebilirsiniz. Bu şekilde de sürekli kendime yeni şeyler katıyorum. Projenin içerisinde yorum satırı kullanmadım. Normalde kullanan biriyim. Zaten burada açıklayacağım için gerek görmedim. Bunun haricinde incelediğiniz ve vaktinizi ayırdığınız için teşekkür ediyorum. Preview videosunu alta bırakıyorum.
   
+Video: https://youtu.be/_dQhrBjByrs
 
-
-
-
-
-
-
-
+<iframe width="1280" height="723" src="https://www.youtube.com/embed/_dQhrBjByrs" title="September 11, 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
