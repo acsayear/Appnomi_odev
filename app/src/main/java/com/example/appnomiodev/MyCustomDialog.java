@@ -3,6 +3,8 @@ package com.example.appnomiodev;
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -22,18 +24,34 @@ public class MyCustomDialog {
 
     public MyCustomDialog(Activity activity, Drawable icon,String title,double price,double campPrice,String desc,int stock) {
         dialog = new Dialog(activity);
-        dialog.setContentView(R.layout.custom_dialog);
-
-//        binding = CustomDialogBinding.inflate(activity.getLayoutInflater());
-//        View view = binding.getRoot();
-
-
-//        binding.imageView3.setImageDrawable(icon);
+        binding = CustomDialogBinding.inflate(activity.getLayoutInflater());
+        View view = binding.getRoot();
+        dialog.setContentView(view);
         dialog.getWindow().setBackgroundDrawable(AppCompatResources.getDrawable(activity, R.drawable.dialog_background));
-        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-//        dialog.setContentView(view);
+        binding.imageView4.setImageDrawable(icon);
+        binding.textView8.setText(title);
 
+        if(stock==0)
+        {
+            binding.imageView3.setVisibility(View.VISIBLE);
+            binding.button3.setText("Stokta kalmadı");
+            binding.button3.setEnabled(false);
+        }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            if (campPrice == -1)
+                binding.textView9.setText(Html.fromHtml("<p>Price:<br>" + price + " $</p>", Html.FROM_HTML_MODE_COMPACT));
+            else
+                binding.textView9.setText(Html.fromHtml("<p>Price:<br><del>" + price + " $</del><br>" + campPrice + " $</p>", Html.FROM_HTML_MODE_COMPACT));
+        } else {
+            if (campPrice == -1)
+                binding.textView9.setText("Price:\n" + price);
+            else binding.textView9.setText("Discount:\n" + price);
+        }
+
+        binding.textView10.setText(Html.fromHtml(desc));
 
 //        int nightModeFlags = activity.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
 //        switch (nightModeFlags) {
