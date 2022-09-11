@@ -40,11 +40,11 @@ public class CategoriesActivity extends AppCompatActivity {
             String id = array.get(0).toString();
             String name = array.get(1).toString();
             String icon_address = array.get(2).toString();
-//
+
             CategorieItem categorieItem =new CategorieItem(id,name,icon_address);
             categorieItems.add(categorieItem);
+
             Log.e("test","test: "+name);
-//            break;
         }
 
         CategoriesAdapter myAdapter = new CategoriesAdapter(this, categorieItems);
