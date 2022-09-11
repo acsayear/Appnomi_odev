@@ -55,8 +55,30 @@ Arraylist den istediğim verileri seçip bir `CategorieItem` adlı class a bu ve
 
 CategoriesAdapter:
 
-Bu class dosyası için ayrı bir layout oluşturdum. Bu layout da kategorinin adı ve resmi mevcut. Bu classımız RecylerView.Adapter ı extendliyor. İhtiyacım olan verileri adapter ın position ından çekip gerekli yerlerde kullanıyorum. `id` değişkenini çekiyorum. `title` değişkenini çekiyorum ve TextView a yazdırıyorum. Daha sonrasında `icon` değişkenini çekiyorum. Bu değişken resmin adresini içeriyor. Glide kütüphanesini kullanarak imageView a resmi aktarıyorum. Bunun haricinde tüm layout u kap
+Bu class dosyası için ayrı bir layout oluşturdum. Bu layout da kategorinin adı ve resmi mevcut. Bu classımız RecylerView.Adapter ı extendliyor. İhtiyacım olan verileri adapter ın position ından çekip gerekli yerlerde kullanıyorum. `id` değişkenini çekiyorum. `title` değişkenini çekiyorum ve TextView a yazdırıyorum. Daha sonrasında `icon` değişkenini çekiyorum. Bu değişken resmin adresini içeriyor. Glide kütüphanesini kullanarak imageView a resmi aktarıyorum. Bunun haricinde tüm layout u kaplayan gizli bir buton oluşturuyorum. Bu butona tıklandığında ürünleri içeren `ProductsActivity` class dosyamız açılıyor. Bu işlemi yapmadan önce içerisine Bundle ı kullanarak `id` String i mi aktarıyorum.
 
+ProductsActivity:
+
+Bundle 'dan id String i mi geri alıp global bir değişkene atıyorum. Sort işlemi için sortby.xml dosyası oluşturup içerisinde `Price`,`Title` ve `PublishmentDate` değerlerini yazıyorum. Daha sonrasında bunları Spinner a aktarıyorum. Spinner ın "set on item selected" event i ne:
+-Global String değişken olan `sorted_by` a spinnerda bulunan değeri aktarıyorum. (açıkcası global değişkenlere ihtiyacım yokmuş bunu da şimdi fark ettim)
+-load_products() fonksiyonunu çağırarak ürünleri listeletiyorum.
+
+load_products():
+
+`load_categories()` fonksiyonu ile aynı mantık. Sadece farklı yaptığım şeyi yukarıda açıklamıştım. `ProductItem` class larını bulunduran productItems ArrayList ini `ProductsAdapter` class ına aktarıyorum.
+
+ProductsAdapter:
+
+Burada da ürün bilgilerini aldıktan sonra yeni oluşturduğum layout dosyasına tümünü aktarıyorum. Eğer indirim var ise HTML in <del> ifadesini kullanarak fiyatın üstünü çizip altta indirimli fiyatı göstertiyorum. Yine tüm layout u kaplayan bir buton oluşturuyorum. Tıkladığımızda mevcut verileri kullanarak detay layout umuz açılıyor. Bu layout u dialog şeklinde tasarladım. Class dosyasına ihtiyacım olan bilgileri gönderiyorum. (Aslında bu verileri direk aktarmak yerine yine internetten çekebilirdim. Ama bu işlem yavaş olacağı için bu yöntemi tercih etmedim. Tabi bu yöntem de de kullanıcı uzun süre aynı layout içerisinde kalırsa güncellenen stoklar için kötü olabilir.)
+  
+Detay kısmı:
+  
+Bu kısım da oldukça basit. Çektiğimiz verileri kullanarak gerekli yerlere aktarıyorum. Ürün açıklamasını yine HTML olarak aktarıyorum. Eğer ürün stokta yoksa ekranda uyarı simgesi çıkıyor. Buna bağlı olarak buton disabled edilebilir ekrana stokta kalmadı yazısı çıkabilir vs vs.
+  
+Notlar:
+  
+Açıkcası çok fazla zamanım olmadığı için programı hızlıca bitirmek istedim. APK ve ABB dosyaları Release klasörü içerisindedir. Dediğim gibi tasarım çok daha güzel olabilirdi. Genel olarak aynı şeylere farklı yaklaşımlar kullandığımı görebilirsiniz. Bu şekilde de sürekli kendime yeni şeyler katıyorum. Projenin içerisinde yorum satırı kullanmadım. Normalde kullanan biriyim. Zaten burada açıklayacağım için gerek görmedim. Bunun haricinde incelediğiniz ve vaktinizi ayırdığınız için teşekkür ediyorum. Preview videosunu alta bırakıyorum.
+  
 
 
 
