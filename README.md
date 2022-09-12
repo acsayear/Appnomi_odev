@@ -71,6 +71,10 @@ ProductsAdapter:
 
 Burada da ürün bilgilerini aldıktan sonra yeni oluşturduğum layout dosyasına tümünü aktarıyorum. Eğer indirim var ise HTML in `<del>` ifadesini kullanarak fiyatın üstünü çizip altta indirimli fiyatı göstertiyorum. Yine tüm layout u kaplayan bir buton oluşturuyorum. Tıkladığımızda mevcut verileri kullanarak detay layout umuz açılıyor. Bu layout u dialog şeklinde tasarladım. Class dosyasına ihtiyacım olan bilgileri gönderiyorum. (Aslında bu verileri direk aktarmak yerine yine internetten çekebilirdim. Ama bu işlem yavaş olacağı için bu yöntemi tercih etmedim. Tabi bu yöntem de de kullanıcı uzun süre aynı layout içerisinde kalırsa güncellenen stoklar için kötü olabilir.)
   
+Sort işlemini nasıl yaptım? 
+
+Oldukça basit. Api zaten bizim için sıralama yapıyor. Bende istek atarken istenen parametreyi göndererek sıralamayı yaptırıyorum. 
+
 Detay kısmı:
   
 Bu kısım da oldukça basit. Çektiğimiz verileri kullanarak gerekli yerlere aktarıyorum. Ürün açıklamasını yine HTML olarak aktarıyorum. Eğer ürün stokta yoksa ekranda uyarı simgesi çıkıyor. Buna bağlı olarak buton disabled edilebilir ekrana stokta kalmadı yazısı çıkabilir vs vs.
